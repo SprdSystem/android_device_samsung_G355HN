@@ -1,0 +1,3 @@
+add_lunch_combo G355HN-userdebug
+add_lunch_combo G355HN-eng
+add_lunch_combo cm_G355HN-userdebug
