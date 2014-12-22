@@ -96,8 +96,8 @@ TARGET_EXTERNAL_APPS = sdcard1
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/core2/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/core2/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/G355HN/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/G355HN/libbt_vndcfg.txt
 
 # Connectivity - Wi-Fi
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211

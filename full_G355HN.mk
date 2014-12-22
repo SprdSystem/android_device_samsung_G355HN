@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from G355HN device
-$(call inherit-product, device/samsung/core2/G355HN.mk)
+$(call inherit-product, device/samsung/G355HN/G355HN.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_G355HN

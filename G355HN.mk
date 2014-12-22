@@ -17,9 +17,9 @@ PRODUCT_COPY_FILES += \
 	device/samsung/rootdir/core2/init.sc8830.rc:root/init.sc8830.rc \
 	device/samsung/rootdir/core2/init.sc8830.usb.rc:root/init.sc8830.usb.rc \
 	device/samsung/rootdir/core2/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
-	device/samsung/rootdir/core2/fstab.sc8830:root/fstab.sc8830 \ 
 	device/samsung/rootdir/core2/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
 	device/samsung/rootdir/core2/init.board.rc:root/init.board.rc \
+	device/samsung/rootdir/core2/fstab.sc8830:root/fstab.sc8830
 
 PRODUCT_COPY_FILES += \
 	device/samsung/core2/media_codecs.xml:system/etc/media_codecs.xml \
