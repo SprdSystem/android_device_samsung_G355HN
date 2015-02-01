@@ -7,17 +7,6 @@
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := true
 TARGET_ARCH := arm
-
-# Note: we build the platform images for ARMv7-A _without_ NEON.
-#
-# Technically, the emulator supports ARMv7-A _and_ NEON instructions, but
-# emulated NEON code paths typically ends up 2x slower than the normal C code
-# it is supposed to replace (unlike on real devices where it is 2x to 3x
-# faster).
-#
-# What this means is that the platform image will not use NEON code paths
-# that are slower to emulate. On the other hand, it is possible to emulate
-# application code generated with the NDK that uses NEON in the emulator.
 #
 TARGET_ARCH_VARIANT := armv7-a
 TARGET_CPU_VARIANT := generic
@@ -68,10 +57,10 @@ USE_OPENGL_RENDERER := true
 # conservatively (or at least with awareness of the trade-off being made).
 VSYNC_EVENT_PHASE_OFFSET_NS := 0
 
-TARGET_BOOTLOADER_BOARD_NAME := sc8830
+TARGET_NO_BOOTLOADER := true
 
-BOARD_KERNEL_CMDLINE :="console=ttyS1,115200n8"
-BOARD_KERNEL_BASE := 0
+BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
+BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_SOURCE := kernel/samsung/core2
 
@@ -84,6 +73,10 @@ BOARD_FLASH_BLOCK_SIZE := 512
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 BOARD_USES_ALSA_AUDIO := true
 
+TARGET_BOARD_PLATFORM := sc8830
+TARGET_BOARD_PLATFORM_GPU := ARM Mali-400
+BOARD_EGL_CFG := device/samsung/G355HN/configs/egl.cfg
+
 # Kernel
 TARGET_KERNEL_CONFIG := kanas3gnfc_hw03_defconfig
 
@@ -92,6 +85,8 @@ BOARD_HAVE_NFC := true
 
 # External apps on SD
 TARGET_EXTERNAL_APPS = sdcard1
+
+DEVICE_RESOLUTION := 480x800
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true

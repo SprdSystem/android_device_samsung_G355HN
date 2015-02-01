@@ -3,34 +3,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/core2/core2-vendor.mk)
-
 # Use high-density artwork where available
 PRODUCT_LOCALES += hdpi
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/core2/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/G355HN/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/rootdir/core2/init.kanas3gnfc.rc:root/init.kanas3gnfc.rc \
-	device/samsung/rootdir/core2/init.kanas3gnfc_base.rc:root/init.kanas3gnfc_base.rc \
-	device/samsung/rootdir/core2/init.sc8830.rc:root/init.sc8830.rc \
-	device/samsung/rootdir/core2/init.sc8830.usb.rc:root/init.sc8830.usb.rc \
-	device/samsung/rootdir/core2/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
-	device/samsung/rootdir/core2/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
-	device/samsung/rootdir/core2/init.board.rc:root/init.board.rc \
-	device/samsung/rootdir/core2/fstab.sc8830:root/fstab.sc8830
+	device/samsung/G355HN/rootdir/init.kanas3gnfc.rc:root/init.kanas3gnfc.rc \
+	device/samsung/G355HN/rootdir/init.kanas3gnfc_base.rc:root/init.kanas3gnfc_base.rc \
+	device/samsung/G355HN/rootdir/init.sc8830.rc:root/init.sc8830.rc \
+	device/samsung/G355HN/rootdir/init.sc8830.usb.rc:root/init.sc8830.usb.rc \
+	device/samsung/G355HN/rootdir/init.sc8830_ss.rc:root/init.sc8830_ss.rc \
+	device/samsung/G355HN/rootdir/ueventd.sc8830.rc:root/ueventd.sc8830.rc \
+	device/samsung/G355HN/rootdir/init.board.rc:root/init.board.rc \
+	device/samsung/G355HN/rootdir/fstab.sc8830:root/fstab.sc8830
 
 PRODUCT_COPY_FILES += \
-	device/samsung/core2/media_codecs.xml:system/etc/media_codecs.xml \
+	device/samsung/G355HN/media_codecs.xml:system/etc/media_codecs.xml \
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
-	device/samsung/core2/keylayout/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
-	device/samsung/core2/keylayout/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
-	device/samsung/core2/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/samsung/core2/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
-	device/samsung/core2/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
+	device/samsung/G355HN/keylayout/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
+	device/samsung/G355HN/keylayout/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
+	device/samsung/G355HN/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	device/samsung/G355HN/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
+	device/samsung/G355HN/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -49,8 +47,7 @@ PRODUCT_PACKAGES += \
 
 # Device-specific packages
 PRODUCT_PACKAGES += \
-	SamsungServiceMode \
-	Torch \
+	SamsungServiceMode
 
 # Charger
 PRODUCT_PACKAGES += \
